@@ -24,7 +24,7 @@ public static partial class SensitiveDataDetector
     [GeneratedRegex(@"^\d{12}$")]
     private static partial Regex INNPattern();
 
-    // Card number: 13-19 digits, optionally grouped with spaces or dashes (not matching pure numbers with no separators)
+    // Card number: 13-19 digits total, optionally grouped with spaces or dashes
     [GeneratedRegex(@"^[\d\s\-]{13,23}$")]
     private static partial Regex CardNumberPattern();
 
@@ -118,21 +118,21 @@ public static partial class SensitiveDataDetector
             return false;
 
         // Move first 4 characters to end and convert to numbers
-        var rearranged = iban.Substring(4) + iban.Substring(0, 4);
-        var numericString = "";
+        var rearranged = string.Concat(iban.AsSpan(4), iban.AsSpan(0, 4));
+        var numericStringBuilder = new System.Text.StringBuilder(rearranged.Length * 2);
 
         foreach (char c in rearranged)
         {
             if (char.IsDigit(c))
-                numericString += c;
+                numericStringBuilder.Append(c);
             else if (char.IsLetter(c))
-                numericString += (char.ToUpper(c) - 'A' + 10).ToString();
+                numericStringBuilder.Append(char.ToUpper(c) - 'A' + 10);
             else
                 return false;
         }
 
         // Calculate mod 97
-        return Mod97(numericString) == 1;
+        return Mod97(numericStringBuilder.ToString()) == 1;
     }
 
     private static int Mod97(string number)

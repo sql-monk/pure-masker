@@ -64,7 +64,8 @@ public static class DataMasker
         var localPart = email.Substring(0, atIndex);
         var domainPart = email.Substring(atIndex);
 
-        var showFirst = Math.Min(options.ShowFirst ?? 2, localPart.Length);
+        var emailOptions = GetDefaultOptions(SensitiveDataType.Email);
+        var showFirst = Math.Min(options.ShowFirst ?? emailOptions.ShowFirst ?? 2, localPart.Length);
         var masked = localPart.Substring(0, showFirst);
         
         if (localPart.Length > showFirst)
