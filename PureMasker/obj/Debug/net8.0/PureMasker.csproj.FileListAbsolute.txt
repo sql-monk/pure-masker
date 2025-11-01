@@ -1,0 +1,12 @@
+/home/runner/work/pure-masker/pure-masker/PureMasker/bin/Debug/net8.0/PureMasker.deps.json
+/home/runner/work/pure-masker/pure-masker/PureMasker/bin/Debug/net8.0/PureMasker.dll
+/home/runner/work/pure-masker/pure-masker/PureMasker/bin/Debug/net8.0/PureMasker.pdb
+/home/runner/work/pure-masker/pure-masker/PureMasker/obj/Debug/net8.0/PureMasker.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/pure-masker/pure-masker/PureMasker/obj/Debug/net8.0/PureMasker.AssemblyInfoInputs.cache
+/home/runner/work/pure-masker/pure-masker/PureMasker/obj/Debug/net8.0/PureMasker.AssemblyInfo.cs
+/home/runner/work/pure-masker/pure-masker/PureMasker/obj/Debug/net8.0/PureMasker.csproj.CoreCompileInputs.cache
+/home/runner/work/pure-masker/pure-masker/PureMasker/obj/Debug/net8.0/PureMasker.sourcelink.json
+/home/runner/work/pure-masker/pure-masker/PureMasker/obj/Debug/net8.0/PureMasker.dll
+/home/runner/work/pure-masker/pure-masker/PureMasker/obj/Debug/net8.0/refint/PureMasker.dll
+/home/runner/work/pure-masker/pure-masker/PureMasker/obj/Debug/net8.0/PureMasker.pdb
+/home/runner/work/pure-masker/pure-masker/PureMasker/obj/Debug/net8.0/ref/PureMasker.dll
